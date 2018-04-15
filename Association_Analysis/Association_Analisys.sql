@@ -1,0 +1,47 @@
+WITH RAW_RECORDS AS
+(
+ SELECT A.InvoiceNo AS INVOICE_NO
+       ,T_INVC.INVOICE_CNT
+       ,A.StockCode AS STOCK_CODE
+       ,COUNT(A.StockCode) OVER(PARTITION BY A.StockCode) AS PRODUCT_CNT
+   FROM SANDBOX.British_Online_Retail_Data A
+  CROSS JOIN
+        (
+         SELECT COUNT(DISTINCT InvoiceNo) AS INVOICE_CNT
+           FROM SANDBOX.British_Online_Retail_Data
+        ) T_INVC
+  GROUP BY INVOICE_NO
+          ,INVOICE_CNT
+          ,STOCK_CODE
+  ORDER BY INVOICE_NO
+          ,STOCK_CODE
+)
+
+SELECT A_PRODUCT
+      ,B_PRODUCT
+      ,AB_CNT / INVOICE_CNT * 100 AS SUPPORT
+      ,AB_CNT / A_PRODUCT_CNT * 100 AS CONFIDENCE
+      ,(AB_CNT / A_PRODUCT_CNT) / (B_PRODUCT_CNT / INVOICE_CNT) AS LIFT
+  FROM (
+        SELECT A.STOCK_CODE AS A_PRODUCT
+              ,B.STOCK_CODE AS B_PRODUCT
+              ,A.PRODUCT_CNT AS A_PRODUCT_CNT
+              ,B.PRODUCT_CNT AS B_PRODUCT_CNT
+              ,COUNT(1) AS AB_CNT
+              ,A.INVOICE_CNT
+          FROM RAW_RECORDS AS A
+          JOIN RAW_RECORDS AS B
+            ON A.INVOICE_NO = B.INVOICE_NO
+         WHERE A.STOCK_CODE != B.STOCK_CODE
+         GROUP BY A_PRODUCT
+                 ,B_PRODUCT
+                 ,A_PRODUCT_CNT
+                 ,B_PRODUCT_CNT
+                 ,INVOICE_CNT
+       )
+ WHERE SUPPORT >= 0.5
+   AND CONFIDENCE >= 0.7
+   AND LIFT >=1.0
+ ORDER BY A_PRODUCT
+         ,B_PRODUCT
+;
