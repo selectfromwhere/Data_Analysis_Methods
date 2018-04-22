@@ -24,5 +24,6 @@
   [2ed2f95d]: https://github.com/selectfromwhere/Data_Analysis_Methods/tree/master/Simple_Linear_Regression "単回帰分析"
 
 ## [重回帰分析][38c345d7] (Multiple_Linear_Regression)
+アメリカのシェアサイクル業者のデータを使って**python**で実践
 
   [38c345d7]: https://github.com/selectfromwhere/Data_Analysis_Methods/tree/master/Multiple_Linear_Regression "重回帰分析"
