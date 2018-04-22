@@ -18,6 +18,11 @@
   [52042519]: https://github.com/selectfromwhere/Data_Analysis_Methods/tree/master/Association_Analysis "アソシエーション分析"
 
 ## [単回帰分析][2ed2f95d] (Simple_Linear_Regression)
-アメリカのシェアサイクル業者のデータを使って**python**で実践
+アメリカのシェアサイクル業者のデータを使って**python**で実践  
+データの取得元：(https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset)
 
   [2ed2f95d]: https://github.com/selectfromwhere/Data_Analysis_Methods/tree/master/Simple_Linear_Regression "単回帰分析"
+
+## [重回帰分析][38c345d7] (Multiple_Linear_Regression)
+
+  [38c345d7]: https://github.com/selectfromwhere/Data_Analysis_Methods/tree/master/Multiple_Linear_Regression "重回帰分析"
