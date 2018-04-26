@@ -29,7 +29,7 @@
   [38c345d7]: https://github.com/selectfromwhere/Data_Analysis_Methods/tree/master/Multiple_Linear_Regression "重回帰分析"
 
 ## [ロジスティック回帰分析][200cd2d2] (Logistic_Regression)
-台湾のクレジットカード業者のデータを使って**python**で実践
+台湾のクレジットカード業者のデータを使って**python**で実践  
 データの取得元：(http://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients#)
 
   [200cd2d2]: https://github.com/selectfromwhere/Data_Analysis_Methods/tree/master/Logistic_Regression "ロジスティック回帰"
