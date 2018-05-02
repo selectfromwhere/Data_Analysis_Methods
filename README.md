@@ -39,3 +39,8 @@
 データの取得元：(http://www.statistics.co.jp/reference/statistical_data/statistical_data.htm)
 
   [3ced0524]: https://github.com/selectfromwhere/Data_Analysis_Methods/tree/master/Principal_Conponent_Analysis "主成分分析"
+
+## [因子分析][ba7194b3] (Factor_Analysis)
+学生の成績データを使って**python**で実践  
+
+  [ba7194b3]: https://github.com/selectfromwhere/Data_Analysis_Methods/tree/master/Factor_Analysis "因子分析"
