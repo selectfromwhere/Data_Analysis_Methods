@@ -33,3 +33,9 @@
 データの取得元：(http://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients#)
 
   [200cd2d2]: https://github.com/selectfromwhere/Data_Analysis_Methods/tree/master/Logistic_Regression "ロジスティック回帰"
+
+## [主成分分析][3ced0524] (Principal_Conponent_Analysis)
+学生の成績データを使って**python**で実践  
+データの取得元：(http://www.statistics.co.jp/reference/statistical_data/statistical_data.htm)
+
+  [3ced0524]: https://github.com/selectfromwhere/Data_Analysis_Methods/tree/master/Principal_Conponent_Analysis "主成分分析"
